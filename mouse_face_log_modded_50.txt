@@ -1,0 +1,178 @@
+{'batch_size': 64,
+ 'beta1': 0.5,
+ 'c_dim': 3,
+ 'checkpoint_dir': 'checkpoint',
+ 'dataset': 'mousefaces',
+ 'epoch': 2000,
+ 'g_advantage': 50,
+ 'input_fname_pattern': '*.jpg',
+ 'input_height': 150,
+ 'input_width': None,
+ 'is_crop': True,
+ 'is_train': True,
+ 'learning_rate': 0.0002,
+ 'output_height': 64,
+ 'output_width': None,
+ 'sample_dir': 'samples',
+ 'train_size': inf,
+ 'unrolled_lstm': False,
+ 'visualize': False}
+---------
+Variables: name (type shape) [size]
+---------
+generator/g_h0_lin/Matrix:0 (float32_ref 100x8192) [819200, bytes: 3276800]
+generator/g_h0_lin/bias:0 (float32_ref 8192) [8192, bytes: 32768]
+generator/g_bn0/beta:0 (float32_ref 512) [512, bytes: 2048]
+generator/g_bn0/gamma:0 (float32_ref 512) [512, bytes: 2048]
+generator/g_h1/w:0 (float32_ref 5x5x256x512) [3276800, bytes: 13107200]
+generator/g_h1/biases:0 (float32_ref 256) [256, bytes: 1024]
+generator/g_bn1/beta:0 (float32_ref 256) [256, bytes: 1024]
+generator/g_bn1/gamma:0 (float32_ref 256) [256, bytes: 1024]
+generator/g_h2/w:0 (float32_ref 5x5x128x256) [819200, bytes: 3276800]
+generator/g_h2/biases:0 (float32_ref 128) [128, bytes: 512]
+generator/g_bn2/beta:0 (float32_ref 128) [128, bytes: 512]
+generator/g_bn2/gamma:0 (float32_ref 128) [128, bytes: 512]
+generator/g_h3/w:0 (float32_ref 5x5x64x128) [204800, bytes: 819200]
+generator/g_h3/biases:0 (float32_ref 64) [64, bytes: 256]
+generator/g_bn3/beta:0 (float32_ref 64) [64, bytes: 256]
+generator/g_bn3/gamma:0 (float32_ref 64) [64, bytes: 256]
+generator/g_h4/w:0 (float32_ref 5x5x3x64) [4800, bytes: 19200]
+generator/g_h4/biases:0 (float32_ref 3) [3, bytes: 12]
+discriminator/d_h0_conv/w:0 (float32_ref 5x5x3x64) [4800, bytes: 19200]
+discriminator/d_h0_conv/biases:0 (float32_ref 64) [64, bytes: 256]
+discriminator/d_h1_conv/w:0 (float32_ref 5x5x64x128) [204800, bytes: 819200]
+discriminator/d_h1_conv/biases:0 (float32_ref 128) [128, bytes: 512]
+discriminator/d_bn1/beta:0 (float32_ref 128) [128, bytes: 512]
+discriminator/d_bn1/gamma:0 (float32_ref 128) [128, bytes: 512]
+discriminator/d_h2_conv/w:0 (float32_ref 5x5x128x256) [819200, bytes: 3276800]
+discriminator/d_h2_conv/biases:0 (float32_ref 256) [256, bytes: 1024]
+discriminator/d_bn2/beta:0 (float32_ref 256) [256, bytes: 1024]
+discriminator/d_bn2/gamma:0 (float32_ref 256) [256, bytes: 1024]
+discriminator/d_h3_conv/w:0 (float32_ref 5x5x256x512) [3276800, bytes: 13107200]
+discriminator/d_h3_conv/biases:0 (float32_ref 512) [512, bytes: 2048]
+discriminator/d_bn3/beta:0 (float32_ref 512) [512, bytes: 2048]
+discriminator/d_bn3/gamma:0 (float32_ref 512) [512, bytes: 2048]
+discriminator/d_h3_lin/Matrix:0 (float32_ref 8192x1) [8192, bytes: 32768]
+discriminator/d_h3_lin/bias:0 (float32_ref 1) [1, bytes: 4]
+Total size of variables: 9451908
+Total bytes of variables: 37807632
+SummaryWriter print 1/2
+Summary writer print 2/2
+ [*] Reading checkpoints...
+ [*] Success to read DCGAN.model-9502
+ [*] Load SUCCESS
+Epoch: [ 0] [   0/   1] time: 10.4293, d_loss: 2.68085527, g_loss: 0.07175958
+Epoch: [ 1] [   0/   1] time: 19.4482, d_loss: 0.93639594, g_loss: 0.75350749
+Epoch: [ 2] [   0/   1] time: 28.5261, d_loss: 0.31503862, g_loss: 2.30572128
+Epoch: [ 3] [   0/   1] time: 37.6165, d_loss: 0.64196384, g_loss: 1.14269233
+Epoch: [ 4] [   0/   1] time: 46.7331, d_loss: 1.56593549, g_loss: 0.23943579
+Epoch: [ 5] [   0/   1] time: 55.8547, d_loss: 1.64964986, g_loss: 0.22816774
+Epoch: [ 6] [   0/   1] time: 64.9966, d_loss: 1.47037935, g_loss: 0.27887142
+Epoch: [ 7] [   0/   1] time: 74.1682, d_loss: 0.97550052, g_loss: 0.72845173
+Epoch: [ 8] [   0/   1] time: 83.3502, d_loss: 0.49808666, g_loss: 1.47063339
+Epoch: [ 9] [   0/   1] time: 92.5459, d_loss: 0.72008318, g_loss: 1.03243196
+Epoch: [10] [   0/   1] time: 101.7655, d_loss: 1.33197975, g_loss: 0.32246998
+Epoch: [11] [   0/   1] time: 110.9968, d_loss: 1.21799719, g_loss: 0.39511544
+Epoch: [12] [   0/   1] time: 120.2220, d_loss: 0.64846706, g_loss: 1.13012564
+Epoch: [13] [   0/   1] time: 129.4495, d_loss: 0.73874217, g_loss: 0.83539206
+Epoch: [14] [   0/   1] time: 138.6909, d_loss: 1.45669842, g_loss: 0.27513820
+Epoch: [15] [   0/   1] time: 147.9300, d_loss: 1.82899356, g_loss: 0.17671186
+Epoch: [16] [   0/   1] time: 157.1802, d_loss: 1.63419867, g_loss: 0.22167528
+Epoch: [17] [   0/   1] time: 166.4213, d_loss: 1.49220753, g_loss: 0.26127344
+Epoch: [18] [   0/   1] time: 175.6749, d_loss: 1.71335757, g_loss: 0.20308846
+Epoch: [19] [   0/   1] time: 184.9508, d_loss: 1.57484508, g_loss: 0.24260327
+Epoch: [20] [   0/   1] time: 194.2183, d_loss: 1.37085593, g_loss: 0.33112994
+Epoch: [21] [   0/   1] time: 203.4855, d_loss: 0.66829032, g_loss: 0.89928645
+Epoch: [22] [   0/   1] time: 212.7630, d_loss: 0.48256135, g_loss: 1.30277610
+Epoch: [23] [   0/   1] time: 222.0466, d_loss: 0.73234510, g_loss: 0.95916975
+Epoch: [24] [   0/   1] time: 231.3310, d_loss: 0.38542220, g_loss: 1.55259252
+Epoch: [25] [   0/   1] time: 240.5982, d_loss: 0.90661621, g_loss: 0.87057018
+Epoch: [26] [   0/   1] time: 249.8713, d_loss: 0.98498935, g_loss: 0.56459302
+Epoch: [27] [   0/   1] time: 259.1500, d_loss: 0.69369209, g_loss: 0.87133241
+Epoch: [28] [   0/   1] time: 268.4310, d_loss: 0.59140593, g_loss: 1.03212905
+Epoch: [29] [   0/   1] time: 277.7126, d_loss: 1.00893521, g_loss: 0.54142523
+Epoch: [30] [   0/   1] time: 287.0035, d_loss: 0.33830112, g_loss: 2.50874996
+Epoch: [31] [   0/   1] time: 296.2888, d_loss: 0.79045534, g_loss: 0.83174169
+Epoch: [32] [   0/   1] time: 305.5659, d_loss: 0.67686146, g_loss: 0.96837163
+Epoch: [33] [   0/   1] time: 314.8219, d_loss: 1.34055960, g_loss: 0.31424603
+Epoch: [34] [   0/   1] time: 324.1057, d_loss: 0.74943358, g_loss: 0.95792460
+Epoch: [35] [   0/   1] time: 333.3712, d_loss: 0.74882483, g_loss: 0.85260570
+Epoch: [36] [   0/   1] time: 342.6538, d_loss: 0.54790807, g_loss: 1.01578712
+Epoch: [37] [   0/   1] time: 351.9414, d_loss: 0.62251925, g_loss: 1.16622782
+Epoch: [38] [   0/   1] time: 361.2170, d_loss: 0.94927758, g_loss: 0.76539063
+Epoch: [39] [   0/   1] time: 370.5248, d_loss: 0.77884340, g_loss: 0.91048968
+Epoch: [40] [   0/   1] time: 379.8078, d_loss: 0.91217893, g_loss: 0.74911636
+Epoch: [41] [   0/   1] time: 389.0866, d_loss: 0.72391671, g_loss: 0.92785567
+Epoch: [42] [   0/   1] time: 398.3996, d_loss: 1.49507558, g_loss: 0.27151820
+Epoch: [43] [   0/   1] time: 407.7016, d_loss: 0.70232964, g_loss: 0.81442630
+Epoch: [44] [   0/   1] time: 417.0067, d_loss: 0.73521787, g_loss: 0.76741123
+Epoch: [45] [   0/   1] time: 426.2920, d_loss: 0.99739504, g_loss: 0.55393791
+Epoch: [46] [   0/   1] time: 435.5855, d_loss: 1.47992039, g_loss: 0.26440614
+Epoch: [47] [   0/   1] time: 444.8712, d_loss: 1.46502841, g_loss: 0.26827925
+Epoch: [48] [   0/   1] time: 454.1500, d_loss: 1.72467184, g_loss: 0.19986917
+Epoch: [49] [   0/   1] time: 463.4474, d_loss: 0.53599012, g_loss: 1.36930001
+Epoch: [50] [   0/   1] time: 472.7401, d_loss: 1.57981002, g_loss: 0.24006794
+Epoch: [51] [   0/   1] time: 482.0274, d_loss: 1.90105355, g_loss: 0.16364618
+Epoch: [52] [   0/   1] time: 491.3138, d_loss: 1.34982097, g_loss: 0.33455646
+Epoch: [53] [   0/   1] time: 500.5990, d_loss: 1.30543566, g_loss: 0.36792555
+Epoch: [54] [   0/   1] time: 509.8739, d_loss: 1.39900362, g_loss: 0.35750434
+Epoch: [55] [   0/   1] time: 519.1508, d_loss: 1.45949137, g_loss: 0.28537220
+Epoch: [56] [   0/   1] time: 528.4410, d_loss: 1.72275805, g_loss: 0.20083371
+Epoch: [57] [   0/   1] time: 537.7241, d_loss: 0.88172215, g_loss: 0.69455516
+Epoch: [58] [   0/   1] time: 547.0052, d_loss: 1.32965469, g_loss: 0.32394218
+Epoch: [59] [   0/   1] time: 556.3077, d_loss: 0.84955359, g_loss: 0.83961934
+Epoch: [60] [   0/   1] time: 565.6142, d_loss: 1.37147117, g_loss: 0.31318063
+Epoch: [61] [   0/   1] time: 574.9091, d_loss: 0.82135338, g_loss: 0.73066145
+Epoch: [62] [   0/   1] time: 584.2006, d_loss: 0.85984689, g_loss: 0.77687138
+Epoch: [63] [   0/   1] time: 593.4985, d_loss: 0.66363704, g_loss: 2.07217693
+Epoch: [64] [   0/   1] time: 602.7854, d_loss: 1.81563234, g_loss: 0.18812659
+Epoch: [65] [   0/   1] time: 612.0735, d_loss: 1.25567412, g_loss: 0.64321172
+Epoch: [66] [   0/   1] time: 621.3648, d_loss: 3.76765323, g_loss: 0.02362593
+Epoch: [67] [   0/   1] time: 630.6510, d_loss: 1.49001026, g_loss: 0.32180402
+Epoch: [68] [   0/   1] time: 639.9337, d_loss: 1.02475393, g_loss: 0.63025010
+Epoch: [69] [   0/   1] time: 649.2308, d_loss: 1.43264663, g_loss: 0.28850788
+Epoch: [70] [   0/   1] time: 658.5282, d_loss: 2.38651752, g_loss: 0.09791309
+Epoch: [71] [   0/   1] time: 667.8319, d_loss: 2.30560017, g_loss: 0.10605552
+Epoch: [72] [   0/   1] time: 677.1138, d_loss: 1.89854395, g_loss: 0.18158811
+Epoch: [73] [   0/   1] time: 686.3870, d_loss: 2.38540626, g_loss: 0.09753574
+Epoch: [74] [   0/   1] time: 695.6694, d_loss: 0.92188209, g_loss: 0.80252743
+Epoch: [75] [   0/   1] time: 704.9498, d_loss: 1.73186612, g_loss: 0.19738889
+Epoch: [76] [   0/   1] time: 714.2515, d_loss: 1.77292585, g_loss: 0.18750516
+Epoch: [77] [   0/   1] time: 723.5308, d_loss: 1.44903243, g_loss: 0.28022814
+Epoch: [78] [   0/   1] time: 732.8177, d_loss: 2.05856705, g_loss: 0.13757029
+Epoch: [79] [   0/   1] time: 742.1300, d_loss: 0.87512594, g_loss: 0.71140587
+Epoch: [80] [   0/   1] time: 751.4242, d_loss: 1.27941930, g_loss: 0.33209789
+Epoch: [81] [   0/   1] time: 760.6955, d_loss: 1.26167297, g_loss: 0.39087081
+Epoch: [82] [   0/   1] time: 769.9976, d_loss: 1.83132780, g_loss: 0.17612344
+Epoch: [83] [   0/   1] time: 779.2903, d_loss: 1.74886119, g_loss: 0.19272295
+Epoch: [84] [   0/   1] time: 788.5893, d_loss: 1.18641984, g_loss: 0.41722310
+Epoch: [85] [   0/   1] time: 797.8838, d_loss: 1.15511644, g_loss: 0.41278553
+Epoch: [86] [   0/   1] time: 807.1731, d_loss: 0.87696558, g_loss: 0.69680274
+Epoch: [87] [   0/   1] time: 816.4710, d_loss: 0.54874074, g_loss: 1.26331782
+Epoch: [88] [   0/   1] time: 825.7471, d_loss: 1.43459272, g_loss: 0.28470397
+Epoch: [89] [   0/   1] time: 835.0275, d_loss: 1.33092344, g_loss: 0.32429278
+Epoch: [90] [   0/   1] time: 844.3243, d_loss: 1.41650152, g_loss: 0.28714210
+Epoch: [91] [   0/   1] time: 853.6194, d_loss: 1.00490260, g_loss: 0.54610157
+Epoch: [92] [   0/   1] time: 862.9139, d_loss: 1.17823923, g_loss: 0.39421201
+Epoch: [93] [   0/   1] time: 872.2008, d_loss: 1.24023533, g_loss: 0.36681589
+Epoch: [94] [   0/   1] time: 881.4779, d_loss: 0.68449861, g_loss: 0.89121097
+Epoch: [95] [   0/   1] time: 890.7691, d_loss: 1.54558468, g_loss: 0.24228239
+Epoch: [96] [   0/   1] time: 900.0665, d_loss: 2.08438230, g_loss: 0.13354990
+Epoch: [97] [   0/   1] time: 909.3484, d_loss: 2.11522341, g_loss: 0.12932189
+Epoch: [98] [   0/   1] time: 918.6306, d_loss: 1.95754123, g_loss: 0.15342551
+[Sample] d_loss: 0.00962777, g_loss: 6.80191517
+Epoch: [99] [   0/   1] time: 928.1547, d_loss: 2.27012658, g_loss: 0.10983521
+Epoch: [100] [   0/   1] time: 937.4500, d_loss: 2.17362237, g_loss: 0.12270082
+Epoch: [101] [   0/   1] time: 946.7418, d_loss: 1.04974091, g_loss: 0.51076603
+Epoch: [102] [   0/   1] time: 956.0415, d_loss: 0.46424717, g_loss: 2.73175120
+Epoch: [103] [   0/   1] time: 965.3409, d_loss: 4.84684229, g_loss: 0.00798658
+Epoch: [104] [   0/   1] time: 974.6504, d_loss: 1.48856866, g_loss: 0.72796702
+Epoch: [105] [   0/   1] time: 983.9419, d_loss: 4.67602873, g_loss: 0.00966451
+Epoch: [106] [   0/   1] time: 993.2342, d_loss: 2.22882104, g_loss: 3.22726274
+Epoch: [107] [   0/   1] time: 1002.5242, d_loss: 3.60963130, g_loss: 0.03532720
+Epoch: [108] [   0/   1] time: 1011.8285, d_loss: 4.12326145, g_loss: 0.01728391
+Epoch: [109] [   0/   1] time: 1021.1255, d_loss: 2.56701446, g_loss: 0.30575114
+Epoch: [110] [   0/   1] time: 1030.4190, d_loss: 4.24836540, g_loss: 0.02077750
+Epoch: [111] [   0/   1] time: 1039.7169, d_loss: 2.43734503, g_loss: 0.13406783
+Epoch: [112] [   0/   1] time: 1048.9958, d_loss: 2.11603904, g_loss: 0.17157437
+Epoch: [113] [   0/   1] time: 1058.2807, d_loss: 1.71928966, g_loss: 0.22583857
